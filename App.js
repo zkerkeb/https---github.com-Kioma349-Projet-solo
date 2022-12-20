@@ -4,14 +4,14 @@ import { View } from 'react-native';
 import FlashMessage from 'react-native-flash-message';
 
 
-function Apps() {
-  return (
-  <View style={{ flex: 1 }}>
-  <YourMainApp />
-  <FlashMessage ref='myLocalFlashMessage' />   {/* <--- here as the last component always with `ref` as a prop */}
-</View>
-  );
-}
+// function Apps() {
+//   return (
+//   <View style={{ flex: 1 }}>
+//   <YourMainApp />
+//   <FlashMessage ref='myLocalFlashMessage' />   {/* <--- here as the last component always with `ref` as a prop */}
+// </View>
+//   );
+// }
 function MyScreen() {
   return (
     <View style={{ flex: 10 }}>
@@ -32,10 +32,17 @@ function MyScreen() {
     </View>
   );
 }
+
+
 const App = () => {
+  
 
-
-  return  <Routes/>
+  return (
+     <>
+    <Routes/>
+     <FlashMessage position="top" />
+    </>
+    )
   
 };
 
